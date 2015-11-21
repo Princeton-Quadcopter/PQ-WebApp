@@ -24,9 +24,7 @@ module.exports = function(app) {
     
 
     // frontend routes =========================================================
-    // all routes show the index
-    app.get('*', function(req, res) {
-        res.sendfile('./public/views/index.html'); // load our public/index.html file
-    });
+    // By default, GET <path> returns the file with path /public/<path>
+    // GET / returns index.html (default behavior)
 
 };
