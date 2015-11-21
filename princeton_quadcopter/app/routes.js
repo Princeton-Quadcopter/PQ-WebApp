@@ -24,9 +24,11 @@ module.exports = function(app) {
         // TODO: get actual parameter data
         var name = "Test Name";
         var newRequest = new QCRequest({ name: name });
-        newRequest.save(function (err, newRequest) {
+        newRequest.save(function (err, savedRequest) {
             if (err) res.send(err);
-            res.status(201); //send the OK, QCRequest created
+
+            //send the OK, QCRequest created
+            res.status(201).json(JSON.stringify(savedRequest));
         })
     });
 
