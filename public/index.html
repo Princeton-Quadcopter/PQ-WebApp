@@ -2,13 +2,86 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+	<script type="text/javascript" src="quadcopterCover.js"></script>
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="quadcopterCover.css" rel="stylesheet">
 
-    <title>Princeton Quadcopter</title>
+<script>
+function showForm(shown, hidden) {
+  document.getElementById(shown).style.display='block';
+  document.getElementById(hidden).style.display='none';
+  return false;
+}
+</script>
 
 </head>
 <body>
 
-	Hello, World!
+<body>
 
+
+      <div class="whole">
+
+		<!--The header-->
+		<div class="title">
+			<div class="inner">
+				<h1>Princeton Quadcopter</h1>
+				<p>Lost or misplaced your prox? Have one of our quadcopters deliver a replacement to you now!</p>
+			</div>
+		</div>
+
+
+
+		<!--Select person-->
+		<div class="request_submit">
+
+				<button class="btn btn-primary btn-lg" onclick="showForm('form', 'showForm')" id="showForm">
+			Request a Quadcopter! </button>
+
+		</div>
+
+      <div class="form" style="display:none" id="form">
+
+			<form>
+
+  <fieldset class="form-group">
+    <label for="nameInput">Name</label>
+    <input type="name" class="form-control" id="nameInput" placeholder="Enter name">
+  </fieldset>
+
+  <fieldset class="form-group">
+    <label for="netID">netID</label>
+    <input type="name" class="form-control" id="netID" placeholder="Enter netID">
+  </fieldset>
+
+
+  <fieldset class="form-group">
+    <label for="selectLocation">Select a location:</label>
+    <select multiple class="form-control" id="selectLocation">
+      <option>Mathey Courtyard</option>
+      <option>Whitman Couryard</option>
+      <option>Wilson Courtyard</option>
+      <option>Forbes Courtyard</option>
+      <option>Butler Courtyard</option>
+      <option>Rocky Courtyard</option>
+      <option>Frist Campus Center</option>
+    </select>
+  </fieldset>
+
+  <fieldset class="form-group">
+    <label for="otherNotes">Any notes or comments?</label>
+    <textarea class="form-control" id="otherNotes" rows="3"></textarea>
+  </fieldset>
+
+
+  <button type="submit" class="btn btn-primary">Submit Request!</button>
+</form>
+
+		</div>
+
+		</div>
+
+
+	</body>
 </body>
 </html>

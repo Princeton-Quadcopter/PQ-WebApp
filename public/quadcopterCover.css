@@ -1,0 +1,46 @@
+body {
+    background-image: url("http://reappropriate.co/wp-content/uploads/2015/09/princeton.jpg");
+    background-position: center;
+    no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.background {
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+}
+
+.whole {
+  background-color: rgba(249, 224, 210, 0.8);
+
+  text-align: center;
+  height: 100vh
+
+}
+
+.form {
+      border-width: 15px;
+
+}
+
+.title {
+
+  font-family: "Avant Garde", sans-serif;
+}
+
+.title h1{
+  font-size: 65px;
+  font-weight: bold;
+
+}
+
+.title p{
+  font-size: 40px;
+  font-style: oblique;
+}
+
+
+
