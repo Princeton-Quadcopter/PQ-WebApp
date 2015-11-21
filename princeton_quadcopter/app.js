@@ -4,6 +4,7 @@ var app = express();
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var mongoose = require('mongoose');
+var morgan = require('morgan');
 
 var port = process.env.PORT || 8080; 
 
@@ -20,6 +21,7 @@ db.once('open', function (callback) {
 // middleware =====================================================
 // No idea what half of this stuff does but don't worry about it,
 // it's just standard middleware
+app.use(morgan('dev'));
 app.use(bodyParser.json()); 
 app.use(bodyParser.json({ type: 'application/vnd.api+json' })); 
 app.use(bodyParser.urlencoded({ extended: true })); 

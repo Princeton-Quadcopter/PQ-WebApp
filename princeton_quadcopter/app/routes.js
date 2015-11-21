@@ -5,13 +5,13 @@ module.exports = function(app) {
 
     // server routes ===========================================================
 
-    // sample api route
+    // Get all QCRequests
     app.get('/api/qcrequests', function(req, res) {
         // use mongoose to get all requests in the database
         QCRequest.find(function(err, qcrequests) {
 
             // if there is an error retrieving, send the error. 
-                            // nothing after res.send(err) will execute
+            // nothing after res.send(err) will execute
             if (err)
                 res.send(err);
 
@@ -19,12 +19,23 @@ module.exports = function(app) {
         });
     });
 
+    // Create a new QCRequest
+    app.post('/api/qcrequests', function(req, res) {
+        // TODO: get actual parameter data
+        var name = "Test Name";
+        var newRequest = new QCRequest({ name: name });
+        newRequest.save(function (err, newRequest) {
+            if (err) res.send(err);
+            res.status(201); //send the OK, QCRequest created
+        })
+    });
+
+
     // route to handle creating goes here (app.post)
     // route to handle delete goes here (app.delete)
-    
+
 
     // frontend routes =========================================================
     // By default, GET <path> returns the file with path /public/<path>
     // GET / returns index.html (default behavior)
-
 };
