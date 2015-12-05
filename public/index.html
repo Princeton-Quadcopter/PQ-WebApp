@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-	<script type="text/javascript" src="quadcopterCover.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript" src="js/createRequest.js"></script>
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="quadcopterCover.css" rel="stylesheet">
 
@@ -42,40 +43,41 @@ function showForm(shown, hidden) {
 
       <div class="form" style="display:none" id="form">
 
+      <!-- The form -->
 			<form>
 
-  <fieldset class="form-group">
-    <label for="nameInput">Name</label>
-    <input type="name" class="form-control" id="nameInput" placeholder="Enter name">
-  </fieldset>
+        <fieldset class="form-group">
+          <label for="nameInput">Name</label>
+          <input type="name" class="form-control" id="nameInput" placeholder="Enter name">
+        </fieldset>
 
-  <fieldset class="form-group">
-    <label for="netID">netID</label>
-    <input type="name" class="form-control" id="netID" placeholder="Enter netID">
-  </fieldset>
-
-
-  <fieldset class="form-group">
-    <label for="selectLocation">Select a location:</label>
-    <select multiple class="form-control" id="selectLocation">
-      <option>Mathey Courtyard</option>
-      <option>Whitman Couryard</option>
-      <option>Wilson Courtyard</option>
-      <option>Forbes Courtyard</option>
-      <option>Butler Courtyard</option>
-      <option>Rocky Courtyard</option>
-      <option>Frist Campus Center</option>
-    </select>
-  </fieldset>
-
-  <fieldset class="form-group">
-    <label for="otherNotes">Any notes or comments?</label>
-    <textarea class="form-control" id="otherNotes" rows="3"></textarea>
-  </fieldset>
+        <fieldset class="form-group">
+          <label for="netID">netID</label>
+          <input type="name" class="form-control" id="netID" placeholder="Enter netID">
+        </fieldset>
 
 
-  <button type="submit" class="btn btn-primary">Submit Request!</button>
-</form>
+        <fieldset class="form-group">
+          <label for="selectLocation">Select a location:</label>
+          <select multiple class="form-control" id="selectLocation">
+            <option>Mathey Courtyard</option>
+            <option>Whitman Couryard</option>
+            <option>Wilson Courtyard</option>
+            <option>Forbes Courtyard</option>
+            <option>Butler Courtyard</option>
+            <option>Rocky Courtyard</option>
+            <option>Frist Campus Center</option>
+          </select>
+        </fieldset>
+
+        <fieldset class="form-group">
+          <label for="otherNotes">Any notes or comments?</label>
+          <textarea class="form-control" id="otherNotes" rows="3"></textarea>
+        </fieldset>
+
+
+        <button type="button" class="btn btn-primary" id="submit-request" onclick="createRequest()">Submit Request!</button>
+      </form>
 
 		</div>
 
