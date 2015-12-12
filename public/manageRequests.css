@@ -20,6 +20,7 @@ body {
   font-size: 70px;
   padding: 30px 30px;
   padding-top: 0px;
+  padding-bottom: 10px;
   text-align: center;
   text-transform: uppercase;
   text-rendering: optimizeLegibility;
@@ -107,4 +108,31 @@ body {
   width: 40vh;
   margin: 0 auto;
 }
+
+  /* 
+  Generic Styling, for Desktops/Laptops 
+  */
+  table { 
+    width: 90%; 
+  margin: 0 auto;
+    border-collapse: collapse; 
+    padding-top: 20px;
+  }
+  /* Zebra striping */
+  tr:nth-of-type(odd) { 
+    background: #eee; 
+  }
+  tr:nth-of-type(even) { 
+    background: #ccc; 
+  }
+  th { 
+    background: #333; 
+    color: white; 
+    font-weight: bold; 
+  }
+  td, th { 
+    padding: 6px; 
+    border: 1px solid #000; 
+    text-align: left; 
+  }
 
