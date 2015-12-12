@@ -26,10 +26,13 @@ module.exports = function(app) {
         var location = req.body.location;
         var notes = req.body.notes;
 
-        console.log(name + ' ' + netID + ' ' + location + ' ' + notes);
-
-        var name = "Test Name";
-        var newRequest = new QCRequest({ name: name });
+        var newRequest = new QCRequest({ 
+            name: name,
+            netID: netID,
+            location: location,
+            notes: notes,
+        });
+        
         newRequest.save(function (err, savedRequest) {
             if (err) res.send(err);
 
