@@ -30,6 +30,8 @@ app.use(express.static(__dirname + '/public'));
 
 // routes ==================================================
 require('./app/routes')(app); // configure our routes
+app.get('/manageRequests', function(req, res, next) {res.sendfile(__dirname + '/public/manageRequests.html');});
+app.get('/track', function(req, res, next) {res.sendfile(__dirname + '/public/student.html');});
 
 // start app ===============================================
 app.listen(port);                           
