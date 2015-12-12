@@ -1,4 +1,3 @@
-// grab the nerd model we just created
 var QCRequest = require('./models/qcrequest');
 
 module.exports = function(app) {
@@ -32,7 +31,7 @@ module.exports = function(app) {
             location: location,
             notes: notes,
         });
-        
+
         newRequest.save(function (err, savedRequest) {
             if (err) res.send(err);
 
