@@ -21,7 +21,13 @@ module.exports = function(app) {
 
     // Create a new QCRequest
     app.post('/api/qcrequests', function(req, res) {
-        // TODO: get actual parameter data
+        var name = req.body.name;
+        var netID = req.body.netID;
+        var location = req.body.location;
+        var notes = req.body.notes;
+
+        console.log(name + ' ' + netID + ' ' + location + ' ' + notes);
+
         var name = "Test Name";
         var newRequest = new QCRequest({ name: name });
         newRequest.save(function (err, savedRequest) {

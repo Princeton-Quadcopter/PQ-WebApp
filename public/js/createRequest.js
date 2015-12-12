@@ -1,13 +1,17 @@
 function createRequest() {
 
-	//TODO create data
-	//var newRequest = {}
+    var data = {
+        name : $('#nameInput').val(),
+        netID : $('#netID').val(),
+        location : $('#selectLocation').val(),
+        notes : $('#otherNotes').val(),
+    }
 
 	//TODO show loading UI
 
     $.ajax({
         type: 'POST',
-        data: null,
+        data: data,
         url: '/api/qcrequests',
         dataType: 'JSON'
     }).done(function( response ) {
