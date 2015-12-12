@@ -8,12 +8,15 @@ function createRequest() {
     }
     if (data.name == "") {
         alert("Enter Name!")
+        return
         }
     if (data.netID == "") {
         alert("Enter NetID!")
+        return
         }
     if (data.location == "") {
         alert("Enter Location!")
+        return
         }
 	//TODO show loading UI
 
