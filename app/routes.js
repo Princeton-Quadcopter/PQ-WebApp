@@ -11,7 +11,7 @@ module.exports = function(app) {
             if (err == null) {
                 res.status(200).json(requests);
             } else {
-                res.err(err);
+                return next(err);
             }
         });
     });
