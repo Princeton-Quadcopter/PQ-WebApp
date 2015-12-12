@@ -30,6 +30,7 @@ module.exports = function(app) {
             netID: netID,
             location: location,
             notes: notes,
+            completed : false,
         });
 
         newRequest.save(function (err, savedRequest) {

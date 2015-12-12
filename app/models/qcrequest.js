@@ -8,4 +8,5 @@ module.exports = mongoose.model('QCRequest', {
     netID : {type : String, default: ''},
     location : {type : String, default: ''},
     notes : {type : String, default: ''},
+    completed : {type : Boolean, default: false},
 });
