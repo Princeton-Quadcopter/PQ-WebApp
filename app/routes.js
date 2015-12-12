@@ -4,17 +4,15 @@ module.exports = function(app) {
 
     // server routes ===========================================================
 
-    // Get all QCRequests
+    // Get all QCRequests that are not completed
     app.get('/api/qcrequests', function(req, res) {
         // use mongoose to get all requests in the database
-        QCRequest.find(function(err, qcrequests) {
-
-            // if there is an error retrieving, send the error. 
-            // nothing after res.send(err) will execute
-            if (err)
-                res.send(err);
-
-            res.json(qcrequests); // return all requests in JSON format
+        QCRequest.find({ 'completed' : false }).limit(50).exec(function(err, requests) {
+            if (err == null) {
+                res.status(200).json(requests);
+            } else {
+                res.err(err);
+            }
         });
     });
 
