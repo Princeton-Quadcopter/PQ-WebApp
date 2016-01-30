@@ -23,7 +23,7 @@ module.exports = function(app) {
         var location = req.body.location;
         var notes = req.body.notes;
 
-        var newRequest = new QCRequest({ 
+        var newRequest = new QCRequest({
             name: name,
             netID: netID,
             location: location,
@@ -47,4 +47,6 @@ module.exports = function(app) {
     // frontend routes =========================================================
     // By default, GET <path> returns the file with path /public/<path>
     // GET / returns index.html (default behavior)
+    app.get('/manageRequests', function(req, res, next) {res.sendfile(__dirname + '/public/manageRequests.html');});
+    app.get('/track', function(req, res, next) {res.sendfile(__dirname + '/public/student.html');});
 };
